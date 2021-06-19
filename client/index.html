@@ -11,8 +11,13 @@
 <body>
     <!-- tool panel -->
     <div class="tool-panel">
-        <div class="hamburger-icon"></div>
-        <div class="tool-bar">
+        <div class="hamburger-icon" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <div class="text">Click</div>
+        </div>
+        <div class="tool-bar hide">
             <div class="tool">
                 <img src="./NewIcons/Black_Pencil.svg" alt="" id="pencil" class="tool-img">
                 <div class="tool-options" id="pencil-options">
@@ -67,6 +72,12 @@
         <canvas class="board"></canvas>
     </div>
     <script>
+        let tool = document.querySelector(".tool-bar");
+        function myFunction(x) {
+            tool.classList.toggle("hide");
+            x.classList.toggle("change");
+        }
+
         // let a = 10;
         let board = document.querySelector(".board");
         board.height = window.innerHeight;

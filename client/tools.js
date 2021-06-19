@@ -10,6 +10,9 @@ let pencilOptions = document.querySelector("#pencil-options");
 let eraserOptions = document.querySelector("#eraser-options");
 let sliders = document.querySelectorAll("input[type='range']");
 let sticky = document.querySelector("#sticky");
+
+// let b = document.querySelector(".board");
+
 let pencilSize = 5;
 let eraserSize = 5;
 // ctx.lineWidth=10;
@@ -19,6 +22,13 @@ ctx.lineCap = "round";
 ctx.miterLimit = 1;
 // ctx.imageSmoothingEnabled=true;
 console.log(ctx);
+
+board.addEventListener("click", function () {
+    console.log("hello");
+    pencilOptions.classList.remove("show");
+    eraserOptions.classList.remove("show");
+})
+
 pencil.addEventListener("click", function () {
     if (activeTool == "pencil") {
         //  pencil options show
